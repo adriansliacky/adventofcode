@@ -3,11 +3,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# .AoCTiles
-.env/session.cookie
-
 # C extensions
 *.so
+
+# AoC
+.aoctiles
+
 
 # Distribution / packaging
 .Python
@@ -131,6 +132,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# .AoCTiles
-.env/session.cookie
