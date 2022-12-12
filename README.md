@@ -2,17 +2,9 @@
 [![works badge](https://cdn.jsdelivr.net/gh/nikku/works-on-my-machine@v0.2.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-In each directory, there's a `main.py` file, which contains the python solution for the given day. There's also `input.txt` (my input for the day) and `test.txt` - which is the file from AoC examples.
-
-All solution print to `stdout`. Example output:
-``` python
-   >>> print(part1)
-   'WCZTHTMPS'
-   >>> print(part2)
-   'BLSGJSDTS'
-```
-<hr>
-
+<h2 align="center">
+  You can get to any solution just by clicking on a tile
+</h2>
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
   2022 - 24 ⭐
@@ -54,3 +46,16 @@ All solution print to `stdout`. Example output:
   <img src=".img/2022/12.png" width="161px">
 </a>
 <!-- AOC TILES END -->
+<h1 align="center">
+</h1>
+
+These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file from AoC examples.
+
+All solution print to `stdout`. Example output:
+``` python
+   >>> print(part1)
+   'WCZTHTMPS'
+   >>> print(part2)
+   'BLSGJSDTS'
+```
+
