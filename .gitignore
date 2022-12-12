@@ -8,7 +8,7 @@ __pycache__/
 
 # AoC
 .aoctiles/
-.pre-commit-config.yaml
+*.yaml
 
 
 # Distribution / packaging
