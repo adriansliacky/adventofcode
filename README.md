@@ -52,7 +52,7 @@
 <h1 align="center">
 </h1>
 
-These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file from AoC examples.
+These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file from the AoC examples.
 
 All solution print to `stdout`. Example output:
 ``` python
