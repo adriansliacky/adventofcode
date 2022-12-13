@@ -3,7 +3,7 @@
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 <h2 align="center">
-  You can get to any solution just by clicking on a tile
+  You can get to any solution just by clicking on a tile below
 </h2>
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
