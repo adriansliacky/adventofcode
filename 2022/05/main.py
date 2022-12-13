@@ -16,8 +16,8 @@ def sol(rever):
             crate_temp[d].extend(reversed(r))
         else:
             crate_temp[d].extend(r)
-    print(''.join(i.pop() for i in crate_temp))
+    return ''.join(i.pop() for i in crate_temp)
 
 
-sol(False)
-sol(True)
+print(sol(False))
+print(sol(True))
