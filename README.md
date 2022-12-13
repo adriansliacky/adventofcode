@@ -7,7 +7,7 @@
 </h2>
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2022 - 24 ⭐
+  2022 - 26 ⭐
 </h1>
 <a href="2022/01/main.py">
   <img src=".img/2022/01.png" width="161px">
@@ -44,6 +44,9 @@
 </a>
 <a href="2022/12/main.py">
   <img src=".img/2022/12.png" width="161px">
+</a>
+<a href="2022/13/main.py">
+  <img src=".img/2022/13.png" width="161px">
 </a>
 <!-- AOC TILES END -->
 <h1 align="center">
