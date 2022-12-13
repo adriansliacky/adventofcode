@@ -1,14 +1,11 @@
 with open('input.txt') as file:
     lines = [line.rstrip('\n') for line in file]
 
-gr_height = len(lines)
-gr_width = len(lines[1])
+gr_height, gr_width, mx = len(lines), len(lines[1]), 0
 
 
 def is_visible(row, col):
-    if row == 0 or col == 0:
-        return True
-    if row == gr_height - 1 or col == gr_width - 1:
+    if (row == gr_height - 1 or col == gr_width - 1) or (row == 0 or col == 0):
         return True
     if all([lines[i][col] < lines[row][col] for i in range(row + 1, gr_height)]):
         return True
@@ -21,10 +18,8 @@ def is_visible(row, col):
     return False
 
 
-def part_2(row, col):
-    if row == 0 or col == 0:
-        return 0
-    if row == gr_height - 1 or col == gr_width - 1:
+def visible_from(row, col):
+    if (row == 0 or col == 0) or (row == gr_height - 1 or col == gr_width - 1):
         return 0
     s_score = 1
     i = 1
@@ -50,16 +45,5 @@ def part_2(row, col):
     return s_score
 
 
-vis = []
-for line in range(gr_height):
-    for val in range(gr_width):
-        vis.append(is_visible(int(line), int(val)))
-
-print(vis.count(True))
-
-mx = 0
-for line in range(gr_height):
-    for val in range(gr_width):
-        score = part_2(line, val)
-        mx = max(mx, score)
-print(mx)
+print([is_visible(int(line), int(val)) for val in range(gr_width) for line in range(gr_height)].count(True))
+print(max([max(mx, visible_from(line, val)) for val in range(gr_width) for line in range(gr_height)]))

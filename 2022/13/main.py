@@ -1,6 +1,7 @@
 from functools import cmp_to_key as c2k
 
-with open('input.txt') as file:
+INPUT = 'input.txt'
+with open(INPUT) as file:
     lines = [line.split('\n') for line in file.read().rstrip().split('\n\n')]
 
 
@@ -18,9 +19,9 @@ def compare(item1, item2):
 
 print(sum([(i + 1 if ln == -1 else 0) for i, ln in enumerate([(compare(eval(ln[0]), eval(ln[1]))) for ln in lines])]))
 
-with open('input.txt') as file:
+with open(INPUT) as file:
     lines = [line for line in file.read().rstrip().split()]
     lines.extend(['[[2]]', '[[6]]'])
     lines = sorted([eval(line) for line in lines], key=c2k(compare))
-    
+
 print((lines.index([[2]]) + 1) * (lines.index([[6]]) + 1))

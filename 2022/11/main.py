@@ -1,5 +1,5 @@
 import heapq
-import math
+from math import prod, lcm
 from copy import deepcopy
 
 with open('input.txt') as file:
@@ -16,7 +16,7 @@ for line in lines:
     temp_dict['if_false'] = int(line[5].split('If false: throw to monkey ')[1:].pop())
     temp_dict['inspections'] = 0
     monkeys.append(temp_dict)
-div_by = math.lcm(*[i['test'] for i in monkeys])
+div_by = lcm(*[i['test'] for i in monkeys])
 
 
 def main(it):
@@ -30,14 +30,11 @@ def main(it):
                     worry = worry // 3
                 elif it == 10_000:
                     worry = worry % div_by
-                if worry % line['test'] == 0:
-                    monkeys_temp[line['if_true']]['items'].append(worry)
-                else:
-                    monkeys_temp[line['if_false']]['items'].append(worry)
+                monkeys_temp[line['if_true' if worry % line['test'] == 0 else 'if_false']]['items'].append(worry)
                 line['inspections'] += 1
             line['items'] = []
     return (i['inspections'] for i in monkeys_temp)
 
 
-print(math.prod(heapq.nlargest(2, main(20))))
-print(math.prod(heapq.nlargest(2, main(10_000))))
+print(prod(heapq.nlargest(2, main(20))))
+print(prod(heapq.nlargest(2, main(10_000))))

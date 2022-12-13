@@ -2,11 +2,11 @@ from collections import deque
 
 with open('input.txt') as file:
     lines = file.read().rstrip().splitlines()
+    pos_s = next((i, j.index('S')) for i, j in enumerate(lines) if 'S' in j)
+    pos_e = next((i, j.index('E')) for i, j in enumerate(lines) if 'E' in j)
+    lines = [line.replace('E', 'z') for line in [line.replace('S', 'a') for line in lines]]
 
 valid = lambda pos_x, pos_y: 0 <= pos_x < len(lines) and 0 <= pos_y < len(lines[0])
-pos_s = next((i, j.index('S')) for i, j in enumerate(lines) if 'S' in j)
-pos_e = next((i, j.index('E')) for i, j in enumerate(lines) if 'E' in j)
-lines = [line.replace('E', 'z') for line in [line.replace('S', 'a') for line in lines]]
 moves, steps = {}, {}
 for pos_s_x, pos_s_y in [(i, j) for i in range(len(lines)) for j in range(len(lines[0]))]:
     if lines[pos_s_x][pos_s_y] == 'a':

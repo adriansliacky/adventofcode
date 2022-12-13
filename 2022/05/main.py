@@ -3,8 +3,7 @@ from copy import deepcopy
 with open('input.txt') as file:
     part1, part2 = [line.split('\n')[:-1] for line in file.read().split('\n\n')]
 
-crates = zip(*[list(line[1::4]) for line in reversed(part1)])
-crates = [[j for j in i if j != ' '] for i in crates]
+crates = [[j for j in i if j != ' '] for i in zip(*[list(line[1::4]) for line in reversed(part1)])]
 
 
 def sol(rever):

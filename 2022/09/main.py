@@ -1,3 +1,7 @@
+with open('input.txt') as file:
+    lines = file.read().splitlines()
+
+
 def move(lines_input, part1):
     pos = [[0, 0] for _ in range(2 if part1 else 10)]
     total = set()
@@ -27,7 +31,5 @@ def move(lines_input, part1):
     return len(total)
 
 
-with open('input.txt') as file:
-    lines = file.read().splitlines()
 print(move(lines, True))
 print(move(lines, False))

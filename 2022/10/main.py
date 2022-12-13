@@ -1,9 +1,7 @@
 with open('input.txt') as file:
     lines = file.read().splitlines()
 
-x, i, j, total = 1, 0, 0, 0
-
-exe = lambda: (x * i) if i in [20, 60, 100, 140, 180, 220] else 0
+x, i, j, total, exe = 1, 0, 0, 0, lambda: (x * i) if i in [20, 60, 100, 140, 180, 220] else 0
 
 
 def func():
