@@ -14,7 +14,7 @@ for pos_s_x, pos_s_y in [(i, j) for i in range(len(lines)) for j in range(len(li
         steps[(pos_s_x, pos_s_y)] = 0
         while queue:
             x, y = queue.popleft()
-            for x2, y2 in [(x + xa, y + ya) for xa, ya in [(0, 1), (0, -1), (1, 0), (-1, 0)]]:
+            for x2, y2 in [(x + nx, y + ny) for nx, ny in [(0, 1), (0, -1), (1, 0), (-1, 0)]]:
                 if valid(x2, y2) and (((x2, y2) not in steps) or (steps[(x2, y2)] > steps[(x, y)] + 1)):
                     if ord(lines[x2][y2]) <= ord(lines[x][y]) + 1:
                         steps[(x2, y2)] = steps[(x, y)] + 1
