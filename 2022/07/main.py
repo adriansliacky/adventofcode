@@ -2,8 +2,7 @@ import re
 
 with open('input.txt') as file:
     lines = [line.rstrip('\n') for line in file][1:]
-dirs = {}
-pwd = '/'
+dirs, pwd = {}, '/'
 for line in lines:
     if line[0] == '$':
         if line[2] == 'c':
@@ -21,11 +20,5 @@ for line in lines:
             except KeyError:
                 dirs[temp_pwd] = file_size
             temp_pwd = re.sub(r'[^/]+?/$', '', temp_pwd, 1)
-total = 0
-for i in dirs.values():
-    if i <= 100000:
-        total += i
-print(total)
-
-min_val = min(i for i in dirs.values() if i > ((70000000 - dirs['/'] - 30000000) * -1))
-print(min_val)
+print(sum([(i if i <= 100000 else 0) for i in dirs.values()]))
+print(min(i for i in dirs.values() if i > ((70000000 - dirs['/'] - 30000000) * -1)))
