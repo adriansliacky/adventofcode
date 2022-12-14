@@ -1,5 +1,3 @@
-import time
-
 with open('input.txt') as file:
     lines = [[tuple(map(int, i.split(','))) for i in line.strip().split(" -> ")] for line in file.readlines()]
 
