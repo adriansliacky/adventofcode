@@ -63,7 +63,9 @@ These files are also located in each directory: `input.txt` (my input for the da
 from the AoC examples. So, if you don't want to change anything in the code, just put your `input.txt` file into folder
 with the python solution.
 
-Some scripts may be slower when using CPython, so I strongly recommend you using [pypy](https://www.pypy.org/).
+### **The project has no dependencies.**
+
+Some scripts may be slower when using **CPython**, so I strongly recommend you using [**PyPy**](https://www.pypy.org/).
 
 All solution print to `stdout`. Example output:
 
