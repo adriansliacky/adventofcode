@@ -2,6 +2,7 @@ import re
 
 with open('input.txt') as file:
     lines = [line.rstrip('\n') for line in file][1:]
+
 dirs, pwd = {}, '/'
 for line in lines:
     if line[0] == '$':
