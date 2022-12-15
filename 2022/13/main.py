@@ -19,5 +19,4 @@ with open('input.txt') as file:
     lines_2 = sorted([eval(ln) for ln in [ln for ln in f.split()] + ['[[2]]', '[[6]]']], key=c2k(compare))
 
 print(sum([(i + 1 if ln == -1 else 0) for i, ln in enumerate([(compare(eval(ln[0]), eval(ln[1]))) for ln in lines])]))
-
 print((lines_2.index([[2]]) + 1) * (lines_2.index([[6]]) + 1))
