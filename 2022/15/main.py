@@ -6,8 +6,8 @@ CPython: around 22secs(part1 and part2)
 
 import re
 
-coords = []
 with open('input.txt') as file:
+    coords = []
     for line in file.read().rstrip().splitlines():
         coords.append(([int(i) for i in re.findall(r'-?\d+', line)]))
 
@@ -41,7 +41,7 @@ def merge_ranges(ranges):
     return merged_ranges
 
 
-for r in range(4000000 + 1):
+for r in range(4000001):
     bcns = []
     for (sen_x, sen_y, bec_x, bec_y) in coords:
         dist_s2b = abs((sen_x - bec_x)) + abs((sen_y - bec_y))
