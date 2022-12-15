@@ -1,4 +1,5 @@
 # <img src="https://github.com/Adrian-Sliacky/adventofcode/blob/master/.img/logo.png" width="25" height="25"/>[ Advent of Code 2022](https://adventofcode.com/2022/)
+
 [![works badge](https://cdn.jsdelivr.net/gh/nikku/works-on-my-machine@v0.2.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
@@ -58,9 +59,14 @@
 <h1 align="center">
 </h1>
 
-These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file from the AoC examples.
+These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file
+from the AoC examples. So, if you don't want to change anything in the code, just put your `input.txt` file into folder
+with the python solution.
+
+Some scripts may be slower when using CPython, so I strongly recommend you using [pypy](https://www.pypy.org/).
 
 All solution print to `stdout`. Example output:
+
 ``` python
    >>> print(part1)
    'WCZTHTMPS'
