@@ -1,19 +1,23 @@
+"""
+Use Pypy for best performance,
+Pypy: around 4000ms (part1 and part2)
+CPython: around 22secs(part1 and part2)
+"""
+
 import re
 
 coords = []
 with open('input.txt') as file:
-    lines = file.read().rstrip().splitlines()
-    for line in lines:
+    for line in file.read().rstrip().splitlines():
         coords.append(([int(i) for i in re.findall(r'-?\d+', line)]))
 
 total = set()
 for (sen_x, sen_y, bec_x, bec_y) in coords:
     dist_s2b = abs((sen_x - bec_x)) + abs((sen_y - bec_y))
     dist_s2r = abs(sen_y - 2000000)
-    dist_s2b_s2r_delta = abs(dist_s2b - dist_s2r)
 
     if dist_s2b > dist_s2r:
-        for i in range(dist_s2b_s2r_delta + 1):
+        for i in range(abs(dist_s2b - dist_s2r) + 1):
             total.update([sen_x + i, sen_x - i])
     if bec_y == 2000000 and bec_x not in total:
         total.remove(bec_x)
