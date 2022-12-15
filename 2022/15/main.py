@@ -5,7 +5,9 @@ CPython: around 22secs (part1 and part2)
 """
 
 import re
+import aocd
 
+aocd.get_data()
 with open('input.txt') as file:
     coords = []
     for line in file.read().rstrip().splitlines():

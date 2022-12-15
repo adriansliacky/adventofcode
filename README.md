@@ -65,7 +65,7 @@ with the python solution.
 
 ### **The project has no dependencies.**
 
-Some scripts may be slower when using **CPython**, so I strongly recommend you using [**PyPy**](https://www.pypy.org/).
+Some scripts may run slower when using **CPython**, so I strongly recommend you using [**PyPy**](https://www.pypy.org/).
 
 All solution print to `stdout`. Example output:
 
