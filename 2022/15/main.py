@@ -1,7 +1,7 @@
 """
 Use Pypy for best performance,
 Pypy: around 4000ms (part1 and part2)
-CPython: around 22secs(part1 and part2)
+CPython: around 22secs (part1 and part2)
 """
 
 import re
