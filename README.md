@@ -58,9 +58,6 @@
 <a href="2022/16/main.py">
   <img src=".img/2022/16.png" width="161px">
 </a>
-<a href="2022/17/main.py">
-  <img src=".img/2022/17.png" width="161px">
-</a>
 <!-- AOC TILES END -->
 <h1 align="center">
 </h1>
