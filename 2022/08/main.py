@@ -1,5 +1,5 @@
 with open('input.txt') as file:
-    lines = [line.rstrip('\n') for line in file]
+    lines = file.read().splitlines()
 
 gr_height, gr_width, mx = len(lines), len(lines[1]), 0
 

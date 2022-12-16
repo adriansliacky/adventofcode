@@ -1,7 +1,7 @@
 import re
 
 with open('input.txt') as file:
-    lines = [line.rstrip('\n') for line in file][1:]
+    lines = file.read().splitlines()[1:]
 
 dirs, pwd = {}, '/'
 for line in lines:
