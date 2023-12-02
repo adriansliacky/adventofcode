@@ -10,7 +10,6 @@ __pycache__/
 .aoctiles/
 *.yaml
 
-
 # Distribution / packaging
 .Python
 .idea/
@@ -111,6 +110,7 @@ celerybeat.pid
 .env
 .venv
 env/
+.env/
 venv/
 ENV/
 env.bak/

@@ -48,9 +48,7 @@ for r in range(4000001):
         r_dist_d2b = dist_s2b - abs(r - sen_y)
         if r_dist_d2b < 0:
             continue
-        bcns.append(
-            [sen_x - r_dist_d2b, sen_x + r_dist_d2b]
-        )
+        bcns.append([sen_x - r_dist_d2b, sen_x + r_dist_d2b])
     rangs = merge_ranges(bcns)
     if len(rangs) > 1:
         print(4000000 * (rangs[0][1] + 1) + r)
