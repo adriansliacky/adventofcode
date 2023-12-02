@@ -9,7 +9,6 @@ __pycache__/
 # AoC
 .aoctiles/
 *.yaml
-new_day.py
 
 # Distribution / packaging
 .Python
