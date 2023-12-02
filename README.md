@@ -1,4 +1,4 @@
-# <img src="https://github.com/Adrian-Sliacky/adventofcode/blob/master/.img/logo.png" width="25" height="25"/>[ Advent of Code ](https://adventofcode.com/2022/)
+# <img src="https://github.com/Adrian-Sliacky/adventofcode/blob/master/.img/logo.png" width="25" height="25"/>[ Advent of Code ](https://adventofcode.com/)
 
 [![works badge](https://cdn.jsdelivr.net/gh/nikku/works-on-my-machine@v0.2.0/badge.svg)](https://github.com/nikku/works-on-my-machine)
 [![Apache 2.0 License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0.html)
