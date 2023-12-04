@@ -1,6 +1,14 @@
 from aocd import submit
 from aocd.models import Puzzle
 from datetime import datetime
+import re
+import collections
+import itertools
+from copy import deepcopy
+import math
+import heapq
+import string
+from functools import cmp_to_key as c2k
 
 EXAMPLE = True
 PART = 1

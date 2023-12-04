@@ -4,7 +4,7 @@ from aocd.models import Puzzle
 import os
 
 day, year = datetime.today().strftime('%d'), datetime.today().strftime('%Y')
-path = f'{year}/03'
+path = f'{year}/{day}'
 if not os.path.exists(path):
     os.makedirs(path)
 
