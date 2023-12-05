@@ -8,7 +8,7 @@
 </h2>
 <!-- AOC TILES BEGIN -->
 <h1 align="center">
-  2023 - 8 ⭐
+  2023 - 10 ⭐
 </h1>
 <a href="2023/01/main.py">
   <img src=".img/2023/01.png" width="161px">
@@ -21,6 +21,9 @@
 </a>
 <a href="2023/04/main.py">
   <img src=".img/2023/04.png" width="161px">
+</a>
+<a href="2023/05/main.py">
+  <img src=".img/2023/05.png" width="161px">
 </a>
 <h1 align="center">
   2022 - 48 ⭐
@@ -106,7 +109,7 @@
 
 These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file
 from the AoC examples. So, if you don't want to change anything in the code, just put your `input.txt` file into folder
-with the python solution.
+with the Python solution.
 
 ### **The project has no dependencies.**
 
