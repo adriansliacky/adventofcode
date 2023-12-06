@@ -11,7 +11,7 @@ import string
 from functools import cmp_to_key as c2k
 
 EXAMPLE = True
-PART = 2
+PART = 1
 
 
 def process_input(file_object):
