@@ -1,4 +1,4 @@
-import collections
+from collections import Counter
 from functools import cmp_to_key as c2k
 
 with open('input.txt') as file:
@@ -6,32 +6,22 @@ with open('input.txt') as file:
 
 
 def hand_type(counts):
-    if len(counts) == 5:
-        return 1  # 'High Card'
-    elif len(counts) == 4:
-        return 2  # 'One Pair'
-    elif len(counts) == 3:
-        if counts[0] == 2:
-            return 3  # 'Two Pair'
-        else:
-            return 4  # 'Three of a Kind'
-    elif len(counts) == 2:
-        if counts[0] == 3:
-            return 5  # 'Full House'
-        else:
-            return 6  # 'Four of a Kind'
-    else:
-        return 7  # 'Five of a Kind'
+    hand_types = {
+        5: 1,  # 'High Card'
+        4: 2,  # 'One Pair'
+        3: 3 if counts[0] == 2 else 4,  # 'Two Pair' or 'Three of a Kind'
+        2: 5 if counts[0] == 3 else 6,  # 'Full House' or 'Four of a Kind'
+        1: 7  # 'Five of a Kind'
+    }
+    return hand_types[len(counts)]
 
 
 def hand_strength(hand, wild_card):
-    counts = sorted(collections.Counter(hand).values(), reverse=True)
     if not wild_card or 'J' not in hand:
-        return hand_type(counts)
+        return hand_type(sorted(Counter(hand).values(), reverse=True))
     else:
         return max(
-            hand_type(sorted(collections.Counter([value if v == 'J' else v for v in hand]).values(), reverse=True)) for
-            value in VALUES)
+            hand_type(sorted(Counter([val if v == 'J' else v for v in hand]).values(), reverse=True)) for val in VALUES)
 
 
 def compare(a, b, wild_card):
@@ -48,10 +38,10 @@ def calculate_total(cards, wild_card):
 
 
 CARDS_BIDS = [line.split() for line in data]
+
 VALUES = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2']
 
 print(calculate_total(CARDS_BIDS, False))
 
-VALUES.pop(3)
-VALUES.append('J')
+VALUES = ['A', 'K', 'Q', 'T', '9', '8', '7', '6', '5', '4', '3', '2', 'J']
 print(calculate_total(CARDS_BIDS, True))

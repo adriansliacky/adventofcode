@@ -5,26 +5,23 @@ with open('input.txt') as file:
     lines = file.read().strip().splitlines()
 
 COLOR_MAP = {'red': (0, 12), 'green': (1, 13), 'blue': (2, 14)}
-part1 = 0
-part2 = 0
-for line in lines:
-    game_id, cubes = line.split(':')
-    game_id = int(re.search(r"\d+", game_id).group(0))
-    cubes = [x.strip() for x in re.split(', |;', cubes)]
+
+
+def calculate_scores(line):
+    game_id = int(re.search(r'\d+', line.split(':')[0]).group(0))
+    cubes = [x.strip() for x in re.split(', |;', line.split(':')[1])]
 
     maxes = [0] * 3
-    game_possible = True
+    game_possible = all(int(n) <= COLOR_MAP[color][1] for n, color in (c.split(' ') for c in cubes))
+
     for c in cubes:
         n, color = c.split(' ')
-        n = int(n)
-        index, limit = COLOR_MAP[color]
-        maxes[index] = max(maxes[index], n)
-        if n > limit:
-            game_possible = False
+        maxes[COLOR_MAP[color][0]] = max(maxes[COLOR_MAP[color][0]], int(n))
 
-    if game_possible:
-        part1 += game_id
-    part2 += prod(maxes)
+    return game_id if game_possible else 0, prod(maxes)
 
-print(part1)
-print(part2)
+
+scores = [calculate_scores(line) for line in lines]
+
+print(sum(x[0] for x in scores))
+print(sum(x[1] for x in scores))

@@ -35,11 +35,11 @@ def create_map(type_lines, prev_ranges):
 
 
 def solve(seeds_ranges):
-    mp = create_map(lines[1], seeds_ranges)
+    current_map = create_map(lines[1], seeds_ranges)
 
     for i in range(2, len(lines)):
-        mp = create_map(lines[i], mp)
-    return min(mp, key=lambda x: x[0])[0]
+        current_map = create_map(lines[i], current_map)
+    return min(current_map, key=lambda x: x[0])[0]
 
 
 SEEDS = list(map(int, re.findall(r'\d+', lines[0][0])))
