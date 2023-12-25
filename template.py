@@ -1,6 +1,6 @@
 from aocd import submit
 from aocd.models import Puzzle
-from datetime import datetime
+import os
 import re
 import collections
 import itertools
@@ -20,14 +20,17 @@ def process_input(file):
 
 # ==================================================
 if EXAMPLE:
-    day, year = datetime.today().strftime('%d'), datetime.today().strftime('%Y')
+    path = os.getcwd().replace("\\", "/").split("/")
+    day, year = int(path[-1]), int(path[-2])
 
-    example_data, p1_answer, p2_answer, *_ = Puzzle(year=int(year), day=int(day)).examples[0]
-    with open('test.txt') as file:
+    example_data, p1_answer, p2_answer, *_ = Puzzle(
+        year=int(year), day=int(day)
+    ).examples[0]
+    with open("test.txt") as file:
         LINES = process_input(file)
 
 else:
-    with open('input.txt') as file:
+    with open("input.txt") as file:
         LINES = process_input(file)
 # ==================================================
 
@@ -39,9 +42,10 @@ for line in LINES:
 if EXAMPLE:
     if (p1_answer if PART == 1 else p2_answer) is not None:
         assert total == int(
-            p1_answer if PART == 1 else p2_answer), f'should be {p1_answer if PART == 1 else p2_answer}, got {total}'
+            p1_answer if PART == 1 else p2_answer
+        ), f"should be {p1_answer if PART == 1 else p2_answer}, got {total}"
     else:
-        print(f'Part {PART} answer:', total)
+        print(f"Part {PART} answer:", total)
 else:
     print(total)
     submit(total)
