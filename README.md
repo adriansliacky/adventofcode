@@ -194,7 +194,7 @@
 <h1 align="center">
 </h1>
 
-These files are also located in each directory: `input.txt` (my input for the day) and `test.txt` - which is the file
+These file is also located in each directory: `test.txt` - which is the file
 from the AoC examples. So, if you don't want to change anything in the code, just put your `input.txt` file into folder
 with the Python solution.
 
@@ -204,8 +204,8 @@ All solution print to `stdout`. Example output:
 
 ``` python
    >>> print(part1)
-   'WCZTHTMPS'
+   43632
    >>> print(part2)
-   'BLSGJSDTS'
+   154365725465679
 ```
 

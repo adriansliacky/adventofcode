@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 # AoC
+input.txt
 .aoc_tiles/*
 !.aoc_tiles/tiles/
 .aoctiles/

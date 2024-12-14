@@ -27,15 +27,15 @@ if EXAMPLE:
         year=int(year), day=int(day)
     ).examples[0]
     with open("test.txt") as file:
-        LINES = process_input(file)
+        lines = process_input(file)
 
 else:
     with open("input.txt") as file:
-        LINES = process_input(file)
+        lines = process_input(file)
 # ==================================================
 
 total = 0
-for line in LINES:
+for line in lines:
     print(line)
 
 # ==================================================
